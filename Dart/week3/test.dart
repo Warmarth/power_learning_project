@@ -1,11 +1,12 @@
 import 'dart:io';
+
 void main() {
   stdout.write('enter a number of choice? ');
-  var output = stdin.readLineSync();
+  final output = stdin.readLineSync();
   if (output == null || output.isEmpty) {
     print('no input given...?');
   } else {
-    var evaluator = int.tryParse(output);
+    final evaluator = int.tryParse(output);
     if (evaluator == null) {
       print('Your number is invalid');
     } else if (evaluator > 10) {
